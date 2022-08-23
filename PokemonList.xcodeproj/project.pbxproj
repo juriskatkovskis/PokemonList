@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		1160DC5C28B10B7F00168502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC5B28B10B7F00168502 /* AppDelegate.swift */; };
 		1160DC5E28B10B7F00168502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC5D28B10B7F00168502 /* SceneDelegate.swift */; };
-		1160DC6028B10B7F00168502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC5F28B10B7F00168502 /* ViewController.swift */; };
+		1160DC6028B10B7F00168502 /* PokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC5F28B10B7F00168502 /* PokemonViewController.swift */; };
 		1160DC6328B10B7F00168502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1160DC6128B10B7F00168502 /* Main.storyboard */; };
 		1160DC6528B10B8000168502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1160DC6428B10B8000168502 /* Assets.xcassets */; };
 		1160DC6828B10B8000168502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1160DC6628B10B8000168502 /* LaunchScreen.storyboard */; };
+		1160DC7328B10E5900168502 /* PokeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC7228B10E5900168502 /* PokeyTableViewCell.swift */; };
+		1160DC7628B113F700168502 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC7528B113F700168502 /* Pokemon.swift */; };
+		1160DC7928B1170C00168502 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1160DC7828B1170C00168502 /* SDWebImage */; };
+		1160DC7B28B121C000168502 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160DC7A28B121C000168502 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1160DC5828B10B7F00168502 /* PokemonList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1160DC5B28B10B7F00168502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1160DC5D28B10B7F00168502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1160DC5F28B10B7F00168502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1160DC5F28B10B7F00168502 /* PokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewController.swift; sourceTree = "<group>"; };
 		1160DC6228B10B7F00168502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1160DC6428B10B8000168502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1160DC6728B10B8000168502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1160DC6928B10B8100168502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1160DC7228B10E5900168502 /* PokeyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeyTableViewCell.swift; sourceTree = "<group>"; };
+		1160DC7528B113F700168502 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		1160DC7A28B121C000168502 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1160DC7928B1170C00168502 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,50 @@
 		1160DC5A28B10B7F00168502 /* PokemonList */ = {
 			isa = PBXGroup;
 			children = (
-				1160DC5B28B10B7F00168502 /* AppDelegate.swift */,
-				1160DC5D28B10B7F00168502 /* SceneDelegate.swift */,
-				1160DC5F28B10B7F00168502 /* ViewController.swift */,
-				1160DC6128B10B7F00168502 /* Main.storyboard */,
-				1160DC6428B10B8000168502 /* Assets.xcassets */,
-				1160DC6628B10B8000168502 /* LaunchScreen.storyboard */,
+				1160DC6F28B10E1500168502 /* AppDelegate */,
+				1160DC7428B113E500168502 /* Model */,
+				1160DC7028B10E2300168502 /* Vieew */,
+				1160DC7128B10E3B00168502 /* Controller */,
 				1160DC6928B10B8100168502 /* Info.plist */,
+				1160DC6428B10B8000168502 /* Assets.xcassets */,
 			);
 			path = PokemonList;
+			sourceTree = "<group>";
+		};
+		1160DC6F28B10E1500168502 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1160DC5B28B10B7F00168502 /* AppDelegate.swift */,
+				1160DC5D28B10B7F00168502 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1160DC7028B10E2300168502 /* Vieew */ = {
+			isa = PBXGroup;
+			children = (
+				1160DC6128B10B7F00168502 /* Main.storyboard */,
+				1160DC6628B10B8000168502 /* LaunchScreen.storyboard */,
+			);
+			path = Vieew;
+			sourceTree = "<group>";
+		};
+		1160DC7128B10E3B00168502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1160DC5F28B10B7F00168502 /* PokemonViewController.swift */,
+				1160DC7228B10E5900168502 /* PokeyTableViewCell.swift */,
+				1160DC7A28B121C000168502 /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1160DC7428B113E500168502 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1160DC7528B113F700168502 /* Pokemon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +126,9 @@
 			dependencies = (
 			);
 			name = PokemonList;
+			packageProductDependencies = (
+				1160DC7828B1170C00168502 /* SDWebImage */,
+			);
 			productName = PokemonList;
 			productReference = 1160DC5828B10B7F00168502 /* PokemonList.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 1160DC4F28B10B7E00168502;
+			packageReferences = (
+				1160DC7728B1170C00168502 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1160DC5928B10B7F00168502 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1160DC6028B10B7F00168502 /* ViewController.swift in Sources */,
+				1160DC7628B113F700168502 /* Pokemon.swift in Sources */,
+				1160DC6028B10B7F00168502 /* PokemonViewController.swift in Sources */,
 				1160DC5C28B10B7F00168502 /* AppDelegate.swift in Sources */,
+				1160DC7328B10E5900168502 /* PokeyTableViewCell.swift in Sources */,
 				1160DC5E28B10B7F00168502 /* SceneDelegate.swift in Sources */,
+				1160DC7B28B121C000168502 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1160DC7728B1170C00168502 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1160DC7828B1170C00168502 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1160DC7728B1170C00168502 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1160DC5028B10B7E00168502 /* Project object */;
 }
